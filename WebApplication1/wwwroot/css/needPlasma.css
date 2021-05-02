@@ -1,0 +1,195 @@
+.headingdonor h1{
+text-align: center;
+justify-content: center;
+margin: 20px;
+font-size: 2em;
+}       
+.headingdonor h1::after{
+  content: "Donor";
+  color: #e76554;
+}
+      
+.select-blood-group h1{
+    text-align:left;
+    justify-content: left;
+    margin-top:45px;
+    margin-bottom:30px;
+    margin-left:20px;
+    font-size: 1.5em;
+   
+    }      
+    
+.select-blood-group h1::after{
+ content: "Blood-Group";
+ color: #e76554;
+      }
+
+
+ .differentgroups{
+     display: flex;
+     justify-content: space-evenly;
+     padding: 0px;
+     margin-left: 50px;
+     margin-right: 50px;
+     margin-bottom: 50px;
+     border-radius: 50px;
+ }     
+
+ .O-positive{
+  
+    
+    color: #e76554; 
+    padding: 30px;
+   cursor: pointer;
+ }
+ .A-positive{
+  
+    
+    color: #e76554; 
+    padding: 30px;
+   
+ }
+ 
+ .AB-positive{
+  
+   
+    color: #e76554; 
+    padding: 30px;
+   
+ }
+ .B-positive{
+  
+   
+    color: #e76554; 
+    padding: 30px;
+   
+ }
+ .O-negative{
+  
+   
+    color: #e76554; 
+    padding: 30px;
+   
+ }
+ .A-negative{
+  
+   
+    color: #e76554; 
+    padding: 30px;
+   
+ }
+ .B-negative{
+  
+    
+    color: #e76554; 
+    padding: 30px;
+   
+ }
+ .AB-negative{
+  
+    
+    color: #e76554; 
+    padding: 30px;
+   
+ }
+
+ .table1{
+   display: none;
+ }
+ .table2{
+   display: none;
+ }
+ .table3{
+   display: none;
+ }
+ .table4{
+   display: none;
+ }
+ .table5{
+   display: none;
+ }
+ .table6{
+   display: none;
+ }
+ .table7{
+   display: none;
+ }
+ .table8{
+   display: none;
+ }
+ .show1{
+    display: block;
+ }
+
+ @media screen and (max-width : 400px){
+   .headingdonor h1{
+    
+      margin: 20px;
+      font-size: 1.4em;
+      } 
+      .select-blood-group h1{
+        
+         margin-top:45px;
+         margin-bottom:30px;
+         margin-left:20px;
+         font-size: 1em;
+        
+         }      
+         .O-positive{
+  
+    
+            color: #e76554; 
+            padding: 30px;
+           cursor: pointer;
+         }
+         .A-positive{
+          
+            
+            color: #e76554; 
+            padding: 3px;
+           
+         }
+         
+         .AB-positive{
+          
+           
+            color: #e76554; 
+            padding: 3px;
+           
+         }
+         .B-positive{
+          
+           
+            color: #e76554; 
+            padding: 3px;
+           
+         }
+         .O-negative{
+          
+           
+            color: #e76554; 
+            padding: 3px;
+           
+         }
+         .A-negative{
+          
+           
+            color: #e76554; 
+            padding: 3px;
+           
+         }
+         .B-negative{
+          
+            
+            color: #e76554; 
+            padding: 3px;
+           
+         }
+         .AB-negative{
+          
+            
+            color: #e76554; 
+            padding: 3px;
+           
+         }        
+ }

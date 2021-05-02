@@ -8,6 +8,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using WebApplication1.Data;
 
 namespace WebApplication1
 {
@@ -24,6 +26,10 @@ namespace WebApplication1
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            // services.AddRazorPages();
+
+            // services.AddDbContext<DonorContext>(options =>
+              //      options.UseSqlServer(Configuration.GetConnectionString("DonorContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,9 +54,11 @@ namespace WebApplication1
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(
+                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+                // endpoints.MapRazorPages();
             });
         }
     }

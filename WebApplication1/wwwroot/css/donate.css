@@ -1,0 +1,144 @@
+::placeholder {
+    color: white;
+    opacity: 1;
+}
+
+.contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 5px 5px 5px 0px;
+    width: 100%;
+}
+
+    .contact-form #gender, .contact-form #bloodgroup {
+        width: calc(48% - 10px);
+        background-color: #353b48;
+        padding: 15px;
+        border-radius: 5px;
+        color: #fff;
+        margin: 15px;
+        border-bottom: none;
+    }
+
+    .contact-form .name, .contact-form .email, .contact-form .contact,
+    .contact-form .disease, .contact-form .recovered {
+        width: calc(48% - 10px);
+        background-color: #353b48;
+        padding: 15px;
+        border-radius: 5px;
+        color: #fff;
+        margin: 15px;
+        border-bottom: none;
+    }
+
+.heading h1 {
+    text-align: center;
+    justify-content: center;
+    margin: 20px;
+    font-size: 2em;
+}
+
+    .heading h1::after {
+        content: "Cause";
+        color: #e76554;
+        animation: textanim 6s linear infinite;
+    }
+
+@keyframes textanim {
+    25% {
+        content: "Life";
+    }
+
+    50% {
+        content: "Better Future";
+    }
+
+    75% {
+        content: "Happy World";
+    }
+}
+
+.contact-form .submit {
+    width: 20%;
+    height: 50px;
+    background-color: transparent;
+    color: #48dbfb;
+    padding: 0px;
+    border: 2px solid #48dbfb;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .3s linear;
+    margin: 15px;
+}
+
+    .contact-form .submit:hover {
+        background-color: #48dbfb;
+        color: #fff;
+    }
+
+@media screen and (max-width:1200px) {
+    .contact-form .name, .contact-form .email, .contact-form .contact,
+    .contact-form .disease, .contact-form .recovered {
+        width: 100%;
+        background-color: #353b48;
+        padding: 25px;
+    }
+
+    .contact-form #gender, .contact-form #bloodgroup {
+        width: 100%;
+        background-color: #353b48;
+        padding: 25px;
+    }
+
+    .contact-form .submit {
+        width: 70%;
+        height: 50px;
+        background-color: transparent;
+        background-color: #48dbfb;
+        color: #fff;
+        padding: 0px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: .3s linear;
+        margin: 15px;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .contact-form .name, .contact-form .email, .contact-form .contact,
+    .contact-form .disease, .contact-form .recovered {
+        width: 100%;
+        background-color: #353b48;
+        padding: 15px;
+        border-radius: 5px;
+        color: #fff;
+        margin: 15px;
+        border-bottom: none;
+    }
+
+    .contact-form #gender, .contact-form #bloodgroup {
+        width: 100%;
+        background-color: #353b48;
+        padding: 15px;
+    }
+
+    .contact-form .submit {
+        width: 70%;
+        height: 50px;
+        background-color: transparent;
+        background-color: #48dbfb;
+        color: #fff;
+        padding: 0px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: .3s linear;
+        margin: 15px;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .heading h1 {
+        font-size: 1.4em;
+    }
+}
