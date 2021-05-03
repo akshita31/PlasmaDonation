@@ -12,9 +12,9 @@ namespace WebApplication1.Pages
 {
     public class CreateModel : PageModel
     {
-        private readonly WebApplication1.Data.DonorContext _context;
+        private readonly WebApplication1.Data.DonorDBContext _context;
 
-        public CreateModel(WebApplication1.Data.DonorContext context)
+        public CreateModel(WebApplication1.Data.DonorDBContext context)
         {
             _context = context;
         }
@@ -36,7 +36,7 @@ namespace WebApplication1.Pages
                 return Page();
             }
 
-            _context.Donor.Add(Donor);
+            _context.Donors.Add(Donor);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

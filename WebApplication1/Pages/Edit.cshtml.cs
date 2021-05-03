@@ -13,9 +13,9 @@ namespace WebApplication1.Pages
 {
     public class EditModel : PageModel
     {
-        private readonly WebApplication1.Data.DonorContext _context;
+        private readonly WebApplication1.Data.DonorDBContext _context;
 
-        public EditModel(WebApplication1.Data.DonorContext context)
+        public EditModel(WebApplication1.Data.DonorDBContext context)
         {
             _context = context;
         }
@@ -30,7 +30,7 @@ namespace WebApplication1.Pages
                 return NotFound();
             }
 
-            Donor = await _context.Donor.FirstOrDefaultAsync(m => m.Id == id);
+            Donor = await _context.Donors.FirstOrDefaultAsync(m => m.Id == id);
 
             if (Donor == null)
             {
@@ -71,7 +71,7 @@ namespace WebApplication1.Pages
 
         private bool DonorExists(int id)
         {
-            return _context.Donor.Any(e => e.Id == id);
+            return _context.Donors.Any(e => e.Id == id);
         }
     }
 }

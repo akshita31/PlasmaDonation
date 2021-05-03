@@ -12,9 +12,9 @@ namespace WebApplication1.Pages
 {
     public class DetailsModel : PageModel
     {
-        private readonly WebApplication1.Data.DonorContext _context;
+        private readonly WebApplication1.Data.DonorDBContext _context;
 
-        public DetailsModel(WebApplication1.Data.DonorContext context)
+        public DetailsModel(WebApplication1.Data.DonorDBContext context)
         {
             _context = context;
         }
@@ -28,7 +28,7 @@ namespace WebApplication1.Pages
                 return NotFound();
             }
 
-            Donor = await _context.Donor.FirstOrDefaultAsync(m => m.Id == id);
+            Donor = await _context.Donors.FirstOrDefaultAsync(m => m.Id == id);
 
             if (Donor == null)
             {

@@ -7,13 +7,13 @@ using WebApplication1.Models;
 
 namespace WebApplication1.Data
 {
-    public class DonorContext : DbContext
+    public class DonorDBContext : DbContext
     {
-        public DonorContext (DbContextOptions<DonorContext> options)
+        public DonorDBContext (DbContextOptions<DonorDBContext> options)
             : base(options)
         {
         }
 
-        public DbSet<WebApplication1.Models.Donor> Donor { get; set; }
+        public DbSet<Donor> Donors { get; set; }
     }
 }

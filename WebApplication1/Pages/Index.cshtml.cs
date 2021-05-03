@@ -12,9 +12,9 @@ namespace WebApplication1.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly WebApplication1.Data.DonorContext _context;
+        private readonly WebApplication1.Data.DonorDBContext _context;
 
-        public IndexModel(WebApplication1.Data.DonorContext context)
+        public IndexModel(WebApplication1.Data.DonorDBContext context)
         {
             _context = context;
         }
@@ -23,7 +23,7 @@ namespace WebApplication1.Pages
 
         public async Task OnGetAsync()
         {
-            Donor = await _context.Donor.ToListAsync();
+            Donor = await _context.Donors.ToListAsync();
         }
     }
 }

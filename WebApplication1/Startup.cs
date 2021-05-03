@@ -28,8 +28,8 @@ namespace WebApplication1
             services.AddControllersWithViews();
             // services.AddRazorPages();
 
-            // services.AddDbContext<DonorContext>(options =>
-              //      options.UseSqlServer(Configuration.GetConnectionString("DonorContext")));
+            services.AddDbContext<DonorDBContext>(options =>
+                   options.UseSqlServer(Configuration.GetConnectionString("DonorDBContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -60,6 +60,27 @@ namespace WebApplication1
 
                 // endpoints.MapRazorPages();
             });
+        }
+    }
+
+    public static class SeedData
+    {
+        public static void Initialize(IServiceProvider serviceProvider)
+        {
+            using (var context = new DonorDBContext(
+                serviceProvider.GetRequiredService<
+                    DbContextOptions<DonorDBContext>>()))
+            {
+                context.Donors.AddRange(
+                    new Models.Donor()
+                    {
+                        Name = "Neev Shah",
+                        ContactNumber = "12445",
+                        Id = 2
+                    }
+                );
+                context.SaveChanges();
+            }
         }
     }
 }

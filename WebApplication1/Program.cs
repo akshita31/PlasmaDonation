@@ -13,14 +13,28 @@ namespace WebApplication1
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            using var host = CreateHostBuilder(args).Build();
+
+
+            var services = host.Services;
+
+            try
+            {
+                SeedData.Initialize(services);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error occured");
+            }
+
+            host.Run();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
+               Host.CreateDefaultBuilder(args)
+                   .ConfigureWebHostDefaults(webBuilder =>
+                   {
+                       webBuilder.UseStartup<Startup>();
+                   });
     }
 }
