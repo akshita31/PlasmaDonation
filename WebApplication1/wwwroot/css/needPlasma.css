@@ -1,305 +1,309 @@
-.headingdonor h1 {
-    text-align: center;
-    justify-content: center;
-    margin: 20px;
-    font-size: 2em;
+.headingdonor h1{
+text-align: center;
+justify-content: center;
+margin: 20px;
+font-size: 2em;
+}       
+.headingdonor h1::after{
+  content: "Donor";
+  color: #e76554;
 }
-
-    .headingdonor h1::after {
-        content: "Donor";
-        color: #e76554;
-    }
-
-.select-blood-group h1 {
-    text-align: left;
+      
+.select-blood-group h1{
+    text-align:left;
     justify-content: left;
-    margin-top: 45px;
-    margin-bottom: 30px;
-    margin-left: 20px;
+    margin-top:45px;
+    margin-bottom:30px;
+    margin-left:20px;
     font-size: 1.5em;
+   
+    }      
+    
+.select-blood-group h1::after{
+ content: "Blood-Group";
+ color: #e76554;
+      }
+
+
+ .differentgroups{
+     display: flex;
+     justify-content: space-evenly;
+     padding: 0px;
+     margin-left:0px;
+     margin-right: 50px;
+     margin-bottom: 50px;
+     border-radius: 50px;
+     flex-wrap: wrap;
+ }     
+
+
+ .AB-negative,.B-negative,.A-negative,.O-negative,.B-positive,.AB-positive, .A-positive, .O-positive{
+   width: calc(20% - 10px);
+   background:#ececec;
+   text-align: center;
+   border: 2px solid #ececec;
+   box-shadow: -10px -10px 15px rgba(255,255,255,0.5),
+   10px 10px 15px rgba(70,70,70,0.12);
+   border-radius: 3px;
+   margin: 20px 10px;
+   padding: 20px 20px;
+   color: #e76554;
+   font-weight: bold;
+   cursor: pointer;
+   transition: transform .5s ;
 }
+tr:nth-child(even){background-color: #f2f2f2;}
 
-    .select-blood-group h1::after {
-        content: "Blood-Group";
-        color: #e76554;
-    }
+ .table1{
+   display: none;
+   border-collapse: collapse;
+   width: 90%;
+   justify-content: center;
+   align-items: center;
+   overflow-x: auto;
+   margin-left: 5%;
+   margin-right: 5%;
+margin-bottom: 10%;
+ }
+ .table1 th{
+   text-align: center;
+   border: 1px solid black;
+   padding: 10px;
+   font-size: 1em;
 
+ }
+ .table1 td,tr{
+   text-align: center;
+   border: 1px solid black;
+   padding: 20px;
+   font-size: 1em;
 
-.differentgroups {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 0px;
-    margin-left: 0px;
-    margin-right: 50px;
-    margin-bottom: 50px;
-    border-radius: 50px;
-    flex-wrap: wrap;
-}
-
-
-.AB-negative, .B-negative, .A-negative, .O-negative, .B-positive, .AB-positive, .A-positive, .O-positive {
-    width: calc(20% - 10px);
-    background: #ececec;
-    text-align: center;
-    border: 2px solid #ececec;
-    box-shadow: -10px -10px 15px rgba(255,255,255,0.5), 10px 10px 15px rgba(70,70,70,0.12);
-    border-radius: 3px;
-    margin: 20px 10px;
-    padding: 20px 20px;
-    color: #e76554;
-    font-weight: bold;
-    cursor: pointer;
-    transition: transform .5s;
-}
-
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-.table1 {
-    display: none;
-    border-collapse: collapse;
-    width: 90%;
-    justify-content: center;
-    align-items: center;
-    overflow-x: auto;
-    margin-left: 5%;
-    margin-right: 5%;
-}
-
-    .table1 th {
-        text-align: center;
-        border: 1px solid black;
-        padding: 10px;
-        font-size: 1em;
-    }
-
-    .table1 td, tr {
-        text-align: center;
-        border: 1px solid black;
-        padding: 20px;
-        font-size: 1em;
-    }
+ }
 
 
-.table2 {
-    display: none;
-    border-collapse: collapse;
-    width: 90%;
-    justify-content: center;
-    align-items: center;
-    overflow-x: auto;
-    margin-left: 5%;
-    margin-right: 5%
-}
-
-    .table2 th {
-        text-align: center;
-        border: 1px solid black;
-        padding: 10px;
-        font-size: 1em;
-    }
-
-    .table2 td, tr {
-        text-align: center;
-        border: 1px solid black;
-        padding: 20px;
-        font-size: 1em;
-    }
-
-.table3 {
-    display: none;
-    border-collapse: collapse;
-    width: 90%;
-    justify-content: center;
-    align-items: center;
-    overflow-x: auto;
-    margin-left: 5%;
-    margin-right: 5%
-}
-
-    .table3 th {
-        text-align: center;
-        border: 1px solid black;
-        padding: 10px;
-        font-size: 1em;
-    }
-
-    .table3 td, tr {
-        text-align: center;
-        border: 1px solid black;
-        padding: 20px;
-        font-size: 1em;
-    }
-
-.table4 {
-    display: none;
-    border-collapse: collapse;
-    width: 90%;
-    justify-content: center;
-    align-items: center;
-    overflow-x: auto;
-    margin-left: 5%;
-    margin-right: 5%
-}
-
-    .table4 th {
-        text-align: center;
-        border: 1px solid black;
-        padding: 10px;
-        font-size: 1em;
-    }
-
-    .table4 td, tr {
-        text-align: center;
-        border: 1px solid black;
-        padding: 20px;
-        font-size: 1em;
-    }
-
-.table5 {
-    display: none;
-    border-collapse: collapse;
-    width: 90%;
-    justify-content: center;
-    align-items: center;
-    overflow-x: auto;
-    margin-left: 5%;
-    margin-right: 5%
-}
-
-    .table5 th {
-        text-align: center;
-        border: 1px solid black;
-        padding: 10px;
-        font-size: 1em;
-    }
-
-    .table5 td, tr {
-        text-align: center;
-        border: 1px solid black;
-        padding: 20px;
-        font-size: 1em;
-    }
-
-.table6 {
-    display: none;
-    border-collapse: collapse;
-    width: 90%;
-    justify-content: center;
-    align-items: center;
-    overflow-x: auto;
-    margin-left: 5%;
-    margin-right: 5%
-}
-
-    .table6 th {
-        text-align: center;
-        border: 1px solid black;
-        padding: 10px;
-        font-size: 1em;
-    }
-
-    .table6 td, tr {
-        text-align: center;
-        border: 1px solid black;
-        padding: 20px;
-        font-size: 1em;
-    }
-
-.table7 {
-    display: none;
-    border-collapse: collapse;
-    width: 90%;
-    justify-content: center;
-    align-items: center;
-    overflow-x: auto;
-    margin-left: 5%;
-    margin-right: 5%
-}
-
-    .table7 th {
-        text-align: center;
-        border: 1px solid black;
-        padding: 10px;
-        font-size: 1em;
-    }
-
-    .table7 td, tr {
-        text-align: center;
-        border: 1px solid black;
-        padding: 20px;
-        font-size: 1em;
-    }
-
-.table8 {
-    display: none;
-    border-collapse: collapse;
-    width: 90%;
-    justify-content: center;
-    align-items: center;
-    overflow-x: auto;
-    margin-left: 5%;
-    margin-right: 5%
-}
-
-    .table8 th {
-        text-align: center;
-        border: 1px solid black;
-        padding: 10px;
-        font-size: 1em;
-    }
-
-    .table8 td, tr {
-        text-align: center;
-        border: 1px solid black;
-        padding: 20px;
-        font-size: 1em;
-    }
-
-.show1 {
+ .table2{
+   display: none;
+   border-collapse: collapse;
+   width: 90%;
+   justify-content: center;
+   align-items: center;
+   overflow-x: auto;
+   margin-left: 5%;
+   margin-right: 5%;
+   margin-bottom: 10%;
+ }
+ .table2 th{
+   text-align: center;
+   border: 1px solid black;
+   padding: 10px;
+   font-size: 1em;
+    
+ }
+ .table2 td,tr{
+   text-align: center;
+   border: 1px solid black;
+   padding: 20px;
+   font-size: 1em;
+ }
+ .table3{
+   display: none;
+   border-collapse: collapse;
+   width: 90%;
+   justify-content: center;
+   align-items: center;
+   overflow-x: auto;
+   margin-left: 5%;
+   margin-right: 5%;
+   margin-bottom: 10%;
+ }
+ .table3 th{
+   text-align: center;
+   border: 1px solid black;
+   padding: 10px;
+   font-size: 1em;
+    
+ }
+ .table3 td,tr{
+   text-align: center;
+   border: 1px solid black;
+   padding: 20px;
+   font-size: 1em;
+ }
+ .table4{
+   display: none;
+   border-collapse: collapse;
+   width: 90%;
+   justify-content: center;
+   align-items: center;
+   overflow-x: auto;
+   margin-left: 5%;
+   margin-right: 5%;
+   margin-bottom: 10%;
+ }
+ .table4 th{
+   text-align: center;
+   border: 1px solid black;
+   padding: 10px;
+   font-size: 1em;
+    
+ }
+ .table4 td,tr{
+   text-align: center;
+   border: 1px solid black;
+   padding: 20px;
+   font-size: 1em;
+ }
+ .table5{
+   display: none;
+   border-collapse: collapse;
+   width: 90%;
+   justify-content: center;
+   align-items: center;
+   overflow-x: auto;
+   margin-left: 5%;
+   margin-right: 5%;
+   margin-bottom: 10%;
+ }
+ .table5 th{
+   text-align: center;
+   border: 1px solid black;
+   padding: 10px;
+   font-size: 1em;
+    
+ }
+ .table5 td,tr{
+   text-align: center;
+   border: 1px solid black;
+   padding: 20px;
+   font-size: 1em;
+ }
+ .table6{
+   display: none;
+   border-collapse: collapse;
+   width: 90%;
+   justify-content: center;
+   align-items: center;
+   overflow-x: auto;
+   margin-left: 5%;
+   margin-right: 5%;
+   margin-bottom: 10%;
+ }
+ .table6 th{
+   text-align: center;
+   border: 1px solid black;
+   padding: 10px;
+   font-size: 1em;
+    
+ }
+ .table6 td,tr{
+   text-align: center;
+   border: 1px solid black;
+   padding: 20px;
+   font-size: 1em;
+ }
+ .table7{
+   display: none;
+   border-collapse: collapse;
+   width: 90%;
+   justify-content: center;
+   align-items: center;
+   overflow-x: auto;
+   margin-left: 5%;
+   margin-right: 5%;
+   margin-bottom: 10%;
+ }
+ .table7 th{
+   text-align: center;
+   border: 1px solid black;
+   padding: 10px;
+   font-size: 1em;
+    
+ }
+ .table7 td,tr{
+   text-align: center;
+   border: 1px solid black;
+   padding: 20px;
+   font-size: 1em;
+ }
+ .table8{
+   display: none;
+   border-collapse: collapse;
+   width: 90%;
+   justify-content: center;
+   align-items: center;
+   overflow-x: auto;
+   margin-left: 5%;
+   margin-right: 5%;
+   margin-bottom: 10%;
+ }
+ .table8 th{
+   text-align: center;
+   border: 1px solid black;
+   padding: 10px;
+   font-size: 1em;
+    
+ }
+ .table8 td,tr{
+   text-align: center;
+   border: 1px solid black;
+   padding: 20px;
+   font-size: 1em;
+ }
+ .show1{
     display: block;
+ }
+ .slider{
+   display: none;
+ }
+ .slider h4{
+   text-align: center;
+   margin: 20px;
+  
+ }
+.defineApos,.defineBpos,.defineOpos,.defineABpos,.defineAneg,.defineBneg,.defineOneg,.defineABneg{
+  display: none;
+  color: #e76554;
+  font-size: 2em;
+  margin: 35px;
+  
 }
-
-.slider {
-    display: none;
+.show-define{
+  display: block;
 }
-
-    .slider h4 {
-        text-align: center;
-        margin: 20px;
-    }
-
-@media screen and (max-width:840px) {
-    .showslider {
-        display: block;
-    }
+@media screen and (max-width:840px){
+  .showslider{
+    display: block;
+  } 
 }
-
-@media screen and (max-width : 400px) {
-    .headingdonor h1 {
-        margin: 20px;
-        font-size: 1.4em;
-    }
-
-    .select-blood-group h1 {
-        margin-top: 45px;
-        margin-bottom: 30px;
-        margin-left: 20px;
-        font-size: 1em;
-    }
-
-    .differentgroups {
-        display: flex;
-        justify-content: space-evenly;
-        margin-left: 10px;
-        margin-right: 10px;
-        margin-bottom: 20px;
-        flex-wrap: wrap;
-    }
-
-    .AB-negative, .B-negative, .A-negative, .O-negative, .B-positive, .AB-positive, .A-positive, .O-positive {
-        padding: 10px 10px;
-        font-weight: lighter;
-    }
-}
+ @media screen and (max-width : 400px){
+   .headingdonor h1{
+    
+      margin: 20px;
+      font-size: 1.4em;
+      } 
+      .select-blood-group h1{
+        
+         margin-top:45px;
+         margin-bottom:30px;
+         margin-left:20px;
+         font-size: 1em;
+        
+         }    
+       
+         .differentgroups{
+            display: flex;
+            justify-content: space-evenly;
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-bottom: 20px;
+           flex-wrap: wrap;
+        }     
+        .AB-negative,.B-negative,.A-negative,.O-negative,.B-positive,.AB-positive, .A-positive, .O-positive{
+      padding: 10px 10px;
+      font-weight: lighter;
+         
+      }
+      
+        
+ }
+ 

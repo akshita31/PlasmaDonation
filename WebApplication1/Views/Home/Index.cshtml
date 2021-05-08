@@ -2,14 +2,71 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Plasma Therapy has been found to be effective against treatment of COVID-19. If you have been infected by COVID in the past, 
-    you can donate Plasma and help to save a life. <a href="https://www.medlife.com/blog/covid-19-treatment-plasma-therapy/">Learn More</a>.</p>
+<body>
+<script>
+      $(document).ready(function(){
+        $('.btn').click(function(){
+          $('.items').toggleClass("show");
+          $('ul li').toggleClass("hide");
+        });
+      });
+    </script>
 
-    <h2>Who is eligible for Plasma Donation ?</h2>
-    <ol>
-        <li>If you have contacted COVID 19 in the past few days.</li>
-        <li>It has been more than 14 days since you tested negative.</li>
-    </ol>
+
+ <div class="alert hide">
+   
+  <span class="msg"><p>Plasma Therapy has been found to be effective against treatment of COVID-19. If you have been infected by COVID in the past, you can donate Plasma and help to save a life. <a href="https://www.medlife.com/blog/covid-19-treatment-plasma-therapy/">Learn More.</a></p>
+</span>
+  <div class="close-btn">
+    <span class="fas fa-times"></span>
+  </div>
 </div>
+<script>
+
+  $('.alert').addClass("show3");
+  $('.alert').removeClass("hide3");
+  $('.alert').addClass("showAlert");
+  setTimeout(function(){
+    $('.alert').removeClass("show3");
+    $('.alert').addClass("hide3");
+  },5000);
+
+$('.close-btn').click(function(){
+  $('.alert').removeClass("show3");
+  $('.alert').addClass("hide3");
+});
+</script>
+
+
+
+<div class="parallax">
+  <div class="greet">
+  <h1></h1>
+</div>
+<div class="btn-container">
+  <div class="btn"><a href="donate.html">Donate Plasma</a></div>
+  
+  <div class="btn"><a href="findPlasma.html">Find Plasma</a></div>
+</div>
+</div>
+
+
+<div class="row">
+  <div class="column" style="background-color:#fd5c63">
+    <h1>1</h1>
+    <h3>Who is eligible for Plasma Donation ?</h3><br>
+    <p>If you have contacted COVID 19 in the past few days.
+      It has been more than 14 days since you tested negative.</p>
+  </div>
+  <div class="column" style="background-color:#FF7F50">
+    <h1>2</h1>
+    <p>SResize the browser window to see the responsive effect (the columns will stack on top of each other instead of floating next to each other, when the screen is less than 600px wide).</p>
+  </div>
+  <div class="column" style="background-color:#DB7093">
+    <h1>3</h1>
+    <p>SResize the browser window to see the responsive effect (the columns will stack on top of each other instead of floating next to each other, when the screen is less than 600px wide)...</p>
+  </div>
+</div>
+<div class="parallax1"></div>
+
+  </body>

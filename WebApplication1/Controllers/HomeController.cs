@@ -48,6 +48,13 @@ namespace WebApplication1.Controllers
             return View();
         }
 
+        [HttpPost]
+        public IActionResult RegisterAsDonor(Donor donor)
+        {
+            Console.WriteLine(donor.Name);
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
