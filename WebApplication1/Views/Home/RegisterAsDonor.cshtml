@@ -1,41 +1,17 @@
 ﻿@{
     ViewData["Title"] = "Register as a Donor";
 }
+@model Donor
 <div class="heading"><h1>Donate for a </h1></div>
 
-<form asp-controller="Home" asp-action="RegisterAsDonor" method="post">
-    <!-- Input and Submit elements -->
-</form>
-
 <form class="contact-form" asp-controller="Home" asp-action="RegisterAsDonor" method="post">
- 
-  <input class="name" type="text" placeholder=" Full Name" required/>
-  
-  <input class="email" type="email" placeholder="Email" required/>
-  
-  <input class="contact" type="tel" placeholder="Contact" pattern="[0-9]{10}" required/>
 
-  <select id="gender" required> 
-    <option>Male</option>
-    <option>Female</option>
-    <option>Other</option>
-  </select>
-  
-  <select id="bloodgroup" required> 
-    <option>O+</option>
-    <option>O-</option>
-    <option>A-</option>
-    <option>A+</option>
-    <option>B+</option>
-    <option>B-</option>
-    <option>AB+</option>
-    <option>AB-</option>
-  </select>
-  
-
-  <input class="disease" placeholder="Disease (if any)">
-
-  <input class="recovered" placeholder="Days from covid recovery" required/>
+  <input asp-for="Name" class="name" type="text" placeholder=" Full Name" required/>
+  <input asp-for="ContactNumber" class="contact" type="tel" placeholder="Contact" required/>
+  <select asp-for="BloodGroup" id="bloodgroup" asp-items="Html.GetEnumSelectList<BloodGroup>()"></select>
+  <select asp-for="Gender" id="gender" asp-items="Html.GetEnumSelectList<Gender>()"></select>
+  <input asp-for="Disease" class="disease" placeholder="Disease (if any)">
+  <input asp-for="DaysFromCovidRecovery" class="recovered" placeholder="Days from covid recovery" required/>
   
   <button class="submit" type="submit">Submit</button>
 

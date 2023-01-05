@@ -26,21 +26,25 @@ namespace WebApplication1.Controllers
 
         public IActionResult Index()
         {            
-            _context.Donors.AddRange(
-                    new Models.Donor()
-                    {
-                        Name = "Neev Shah",
-                        ContactNumber = "12445",
-                    }
-                );
-
-            _context.SaveChanges();
             return View();
         }
 
         public IActionResult FindDonors()
         {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult FindDonors(FindDonorsViewModel viewModel)
+        {
+            var donors = _context.Donors.Where
+                (donor => donor.BloodGroup == viewModel.BloodGroup);
+            
+            return View(new FindDonorsViewModel()
+            {
+                BloodGroup = viewModel.BloodGroup,
+                Donors = donors.ToList()
+            });
         }
 
         public IActionResult RegisterAsDonor()
@@ -51,7 +55,13 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public IActionResult RegisterAsDonor(Donor donor)
         {
-            Console.WriteLine(donor.Name);
+            if(ModelState.IsValid)
+            {
+                Console.WriteLine(donor.Name);
+                _context.Donors.AddRange(donor);
+                _context.SaveChanges();
+            }
+            
             return View();
         }
 

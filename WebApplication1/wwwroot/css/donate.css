@@ -1,6 +1,7 @@
 ::placeholder {
   color: white;
   opacity: 1; 
+  font-weight:bold;
 }
 
 .contact-form{
@@ -19,6 +20,7 @@
     border-radius: 5px;
     color: #fff;
     margin:15px;
+    font-weight:bold;
     border-bottom: none;
   }
   .contact-form .name, .contact-form .email,.contact-form .contact,
@@ -88,7 +90,6 @@ font-size: 2em;
         width:100%;
         background-color: #353b48;
         padding: 25px;
-       
       }
       .contact-form .submit{
         width: 70%;
@@ -119,7 +120,6 @@ font-size: 2em;
       width:100%;
       background-color: #353b48;
       padding: 15px;
-     
     }
     .contact-form .submit{
       width: 70%;

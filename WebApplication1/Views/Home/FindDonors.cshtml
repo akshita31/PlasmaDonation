@@ -2,265 +2,47 @@
     ViewData["Title"] = "Find Donors";
 }
 
- <div class="headingdonor"><h1>Find a </h1></div>
-    <div class="select-blood-group"><h1>Select a </h1></div>
+@model FindDonorsViewModel
 
-    <div class="differentgroups">
+<div class="headingdonor"><h1>Find a </h1></div>
+<div class="select-blood-group"><h1>Select a </h1></div>
 
-        <button class="O-positive">O+</button>
-        <button class="O-negative">O-</button>
-        <button class="A-positive">A+</button>
-        <button class="A-negative">A-</button>
-        <button class="B-positive">B+</button>
-        <button class="B-negative">B-</button>
-        <button class="AB-positive">AB+</button>
-        <button class="AB-negative">AB-</button>
-    </div>
-  
-    <table class="table1">
-      <tr>
-        <th>Full Name</th>
-        <th>E-Mail</th>
-        <th>Contact</th>
-        <th>Gender</th>
-        <th>Blood-Group</th>
-        <th>Diseases</th>
-        <th>Days post recovery</th>
-      </tr>
-      <tr>
-       <td>Adam Johnson</td>
-      <td>Johnson@gadhdrwef</td>
-      <td>6712121212</td>
-      <td>male</td>
-      <td>a+</td>
-      <td>diabities</td>
-      <td>20</td>
-      
-      </tr>
-     </table>
-     <table class="table2">
-     <tr>
-        <th>Full Name</th>
-        <th>E-Mail</th>
-        <th>Contact</th>
-        <th>Gender</th>
-        <th>Blood-Group</th>
-        <th>Diseases</th>
-        <th>Days post recovery</th>
-      </tr>
-      <tr>
-       <td>Adam Johnson</td>
-      <td>Johnson@gadhdrwef</td>
-      <td>6712121212</td>
-      <td>male</td>
-      <td>a+</td>
-      <td>diabities</td>
-      <td>20</td>
-      
-      </tr>
-     </table>
-     <table class="table3">
-      <tr>
-        <th>wee</th>
-        <th>wee</th>
-        <th>wee</th>
-      </tr>
-      <tr>
-        <td>Alfreds Futterkiste</td>
-        <td>Maria Anders</td>
-        <td>Germany</td>
-      </tr>
-     </table>
-     <table class="table4">
-      <tr>
-        <th>omawada</th>
-        <th>omawada</th>
-        <th>omawada</th>
-      </tr>
-      <tr>
-        <td>Alfreds Futterkiste</td>
-        <td>Maria Anders</td>
-        <td>Germany</td>
-      </tr>
-     </table>
-     <table class="table5">
-      <tr>
-        <th>weee</th>
-        <th>weee</th>
-        <th>weee</th>
-      </tr>
-      <tr>
-        <td>Alfreds Futterkiste</td>
-        <td>Maria Anders</td>
-        <td>Germany</td>
-      </tr>
-     </table>
-     <table class="table6">
-      <tr>
-        <th>meme</th>
-        <th>meme</th>
-        <th>meme</th>
-      </tr>
-      <tr>
-        <td>Alfreds Futterkiste</td>
-        <td>Maria Anders</td>
-        <td>Germany</td>
-      </tr>
-     </table>
-     <table class="table7">
-      <tr>
-        <th>lol</th>
-        <th>lol</th>
-        <th>lol</th>
-      </tr>
-      <tr>
-        <td>Alfreds Futterkiste</td>
-        <td>Maria Anders</td>
-        <td>Germany</td>
-      </tr>
-     </table>
-     <table class="table8">
-      <tr>
-        <th>Covid</th>
-        <th>Covid</th>
-        <th>Covid</th>
-      </tr>
-      <tr>
-        <td>Alfreds Futterkiste</td>
-        <td>Maria Anders</td>
-        <td>Germany</td>
-      </tr>
-     </table>
+<div>
+
+    <form asp-controller="Home" id="find-form" asp-action="FindDonors" method="post">
+     <select id="find-bloodgroup" asp-for="BloodGroup" asp-items="Html.GetEnumSelectList<BloodGroup>()"></select>
+    <button class="find-submit" type="submit">Submit</button>
+    </form>
+</div>
+
+<table class="table1">
+    <tbody>
+        @{
+            if (Model != null)
+            {
+                <tr>
+                    <th>Full Name</th>
+                    <th>Contact</th>
+                    <th>Gender</th>
+                    <th>Blood-Group</th>
+                    <th>Diseases</th>
+                   <th>Days post recovery</th>
+                </tr>
+
+                 foreach(var data in Model.Donors)
+                        {
+                                 <tr>   
+                                    <td>@data.Name</td>
+                                    <td>@data.ContactNumber</td>
+                                    <td>@data.Gender</td>
+                                    <td>@data.BloodGroup</td>
+                                    <td>@data.Disease</td>
+                                    <td>@data.DaysFromCovidRecovery</td>
+                    </tr>
+                }
+            }
+        }
+    </tbody>
+</table>
+
 <div class="slider"><h4>Swipe for full data</h4></div>
-    <script>
-      $(document).ready(function(){
-        $('.O-positive').click(function(){
-          $('.table1').addClass("show1");
-          $('.slider').addClass("showslider");
-          $('.table2').removeClass("show1");
-          $('.table3').removeClass("show1");
-          $('.table4').removeClass("show1");
-          $('.table5').removeClass("show1");
-          $('.table6').removeClass("show1");
-          $('.table7').removeClass("show1");
-          $('.table8').removeClass("show1");
-        
-        });
-      });
-    </script>
-
-<script>
-  $(document).ready(function(){
-    $('.O-negative').click(function(){
-      $('.table2').addClass("show1");
-      $('.slider').addClass("showslider");
-          $('.table3').removeClass("show1");
-          $('.table1').removeClass("show1");
-          $('.table4').removeClass("show1");
-          $('.table5').removeClass("show1");
-          $('.table6').removeClass("show1");
-          $('.table7').removeClass("show1");
-          $('.table8').removeClass("show1");
-     
-    });
-  });
-</script>
-
-<script>
-  $(document).ready(function(){
-    $('.A-positive').click(function(){
-     $('.table3').addClass("show1");
-     $('.slider').addClass("showslider");
-          $('.table2').removeClass("show1");
-          $('.table1').removeClass("show1");
-          $('.table4').removeClass("show1");
-          $('.table5').removeClass("show1");
-          $('.table6').removeClass("show1");
-          $('.table7').removeClass("show1");
-          $('.table8').removeClass("show1");
-    });
-  });
-</script>
-
-<script>
-  $(document).ready(function(){
-    $('.A-negative').click(function(){
-      $('.table4').addClass("show1");
-      $('.slider').addClass("showslider");
-          $('.table2').removeClass("show1");
-          $('.table3').removeClass("show1");
-          $('.table1').removeClass("show1");
-          $('.table5').removeClass("show1");
-          $('.table6').removeClass("show1");
-          $('.table7').removeClass("show1");
-          $('.table8').removeClass("show1");
-    });
-  });
-</script>
-
-<script>
-  $(document).ready(function(){
-    $('.B-positive').click(function(){
-     
-     $('.table5').addClass("show1");
-     $('.slider').addClass("showslider");
-          $('.table2').removeClass("show1");
-          $('.table3').removeClass("show1");
-          $('.table4').removeClass("show1");
-          $('.table1').removeClass("show1");
-          $('.table6').removeClass("show1");
-          $('.table7').removeClass("show1");
-          $('.table8').removeClass("show1");
-    });
-  });
-</script>
-
-<script>
-  $(document).ready(function(){
-    $('.B-negative').click(function(){
-     
-     $('.table6').addClass("show1");
-     $('.slider').addClass("showslider");
-          $('.table2').removeClass("show1");
-          $('.table3').removeClass("show1");
-          $('.table4').removeClass("show1");
-          $('.table5').removeClass("show1");
-          $('.table1').removeClass("show1");
-          $('.table7').removeClass("show1");
-          $('.table8').removeClass("show1");
-    });
-  });
-</script>
-
-<script>
-  $(document).ready(function(){
-    $('.AB-positive').click(function(){
-     
-    $('.table7').addClass("show1");
-    $('.slider').addClass("showslider");
-          $('.table2').removeClass("show1");
-          $('.table3').removeClass("show1");
-          $('.table4').removeClass("show1");
-          $('.table5').removeClass("show1");
-          $('.table6').removeClass("show1");
-          $('.table1').removeClass("show1");
-          $('.table8').removeClass("show1");
-    });
-  });
-</script>
-
-<script>
-  $(document).ready(function(){
-    $('.AB-negative').click(function(){
-      $('.table8').addClass("show1");
-      $('.slider').addClass("showslider");
-          $('.table2').removeClass("show1");
-          $('.table3').removeClass("show1");
-          $('.table4').removeClass("show1");
-          $('.table5').removeClass("show1");
-          $('.table6').removeClass("show1");
-          $('.table7').removeClass("show1");
-          $('.table1').removeClass("show1");
-    });
-  });
-</script>
